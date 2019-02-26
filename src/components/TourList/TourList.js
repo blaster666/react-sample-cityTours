@@ -15,15 +15,13 @@ export default class TourList extends Component {
   render() {
     const { tours } = this.state;
     return (
-      <div>
-        <section className="tourlist">
-          {tours.map(tour => {
-            return (
-              <Tour key={tour.id} tour={tour} removeTour={this.removeTour} />
-            );
-          })}
-        </section>
-      </div>
+      <section className="tourlist">
+        {tours.map(tour => {
+          return (
+            <Tour key={tour.id} tour={tour} removeTour={this.removeTour} />
+          );
+        })}
+      </section>
     );
   }
 }
